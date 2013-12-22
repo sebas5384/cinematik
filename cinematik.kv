@@ -1,0 +1,43 @@
+#:kivy 1.0.9
+
+<Cinematik>:
+	width: root.width
+	height: root.height
+	orientation: 'vertical'
+	results: results
+	CinematikSearch:
+		id: search
+	CinematikResults:
+		id: results
+
+
+<CinematikSearch>
+	search_box: search_box
+    TextInput:
+    	id: search_box
+        font_size: 70  
+        top: root.top - 160
+        text: ""
+        width: root.width * 3 / 4
+        center_x: root.width / 2
+        multiline: False
+        on_text_validate: root.search_movie()
+        
+    Label:
+        font_size: 70  
+        center_x: root.width / 2
+        top: root.top - 50
+        text: "Cinematik"
+
+<CinematikResults>
+
+
+<CinematikLatest>
+	GridLayout:
+		cols: 3
+	
+	
+<CinematikPlayer>
+	VideoPlayer:
+		width: root.width
+		height: root.height
