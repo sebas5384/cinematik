@@ -34,3 +34,19 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Editors
+.project
+.settings
+*.sublime-*
+nbproject
+
+# Other SCMs
+.svn
+
+# Grarbage
+.DS_Store
+*.swo
+*.Trash*
+*~
+*.orig
